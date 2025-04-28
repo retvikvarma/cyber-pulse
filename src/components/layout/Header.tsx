@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Dashboard', path: '/dashboard' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Feedback', path: '/feedback' },
   ];
 
   return (
@@ -72,3 +72,4 @@ const Header = () => {
 };
 
 export default Header;
+
