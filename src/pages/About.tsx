@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Shield, Database, Network, BarChart2 } from 'lucide-react';
@@ -52,6 +51,21 @@ const About = () => {
                 </CardContent>
               </Card>
             </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 cyber-heading">Feature Selection Technique</h2>
+            <Card className="bg-cyberpulse-darker border-cyberpulse-purple/20 mb-8">
+              <CardHeader>
+                <CardTitle>Model Development & Feature Selection</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">
+                  In this project, We experimented with various machine learning algorithms, including XGBoost, Random Forest, and Support Vector Machine (SVM), for detecting network intrusions using the CIC-IDS 2017 dataset. After extensive evaluation, We selected XGBoost as the final model, as it is highly efficient for large datasets and achieved an accuracy of nearly 99%.
+                  Additionally, We compared different feature selection methods — filter, wrapper, and embedded techniques — to identify and select the most relevant attributes, thereby improving model performance and reducing complexity.
+                </p>
+              </CardContent>
+            </Card>
           </section>
 
           <section>
