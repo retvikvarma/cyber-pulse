@@ -1,4 +1,3 @@
-
 import Logo from './Logo';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -6,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Logo />
             <p className="text-gray-400 mt-4">
@@ -20,17 +19,7 @@ const Footer = () => {
               <li><a href="/" className="text-gray-400 hover:text-cyberpulse-purple">Home</a></li>
               <li><a href="/dashboard" className="text-gray-400 hover:text-cyberpulse-purple">Dashboard</a></li>
               <li><a href="/about" className="text-gray-400 hover:text-cyberpulse-purple">About</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-cyberpulse-purple">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">Network Monitoring</li>
-              <li className="text-gray-400">Intrusion Detection</li>
-              <li className="text-gray-400">Traffic Analysis</li>
-              <li className="text-gray-400">Security Consulting</li>
+              <li><a href="/feedback" className="text-gray-400 hover:text-cyberpulse-purple">Feedback</a></li>
             </ul>
           </div>
           

@@ -8,7 +8,7 @@ import Layout from "@/components/layout/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Feedback from "./pages/Contact";  // We'll keep using the Contact component but route to /feedback
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +23,7 @@ const App = () => (
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          <Route path="/feedback" element={<Layout><Feedback /></Layout>} />
           <Route path="*" element={<Layout><NotFound /></Layout>} />
         </Routes>
       </BrowserRouter>

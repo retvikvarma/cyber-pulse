@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { AlertTriangle, ShieldCheck, Activity, Settings, ChevronDown, ChevronUp, Calendar } from 'lucide-react';
@@ -74,9 +73,8 @@ const Dashboard = () => {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-        <TabsList className="grid grid-cols-2 md:grid-cols-3 mb-4">
+        <TabsList className="grid grid-cols-2 mb-4">
           <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="analytics">Analytics</TabsTrigger>
           <TabsTrigger value="settings">Settings</TabsTrigger>
         </TabsList>
 
@@ -109,15 +107,12 @@ const Dashboard = () => {
 
             <Card className="bg-cyberpulse-darker border-blue-800/30">
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-gray-400">Detection Rate</CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-400">Total Packets</CardTitle>
               </CardHeader>
               <CardContent>
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span>Accuracy</span>
-                    <span>96.52%</span>
-                  </div>
-                  <Progress value={96.52} className="h-2 mt-2" />
+                <div className="flex items-center">
+                  <Activity className="h-5 w-5 text-blue-500 mr-2" />
+                  <span className="text-2xl font-bold">128,291</span>
                 </div>
               </CardContent>
             </Card>
@@ -180,52 +175,6 @@ const Dashboard = () => {
                 </ResponsiveContainer>
               </CardContent>
             </Card>
-
-            <Card className="bg-cyberpulse-darker">
-              <CardHeader>
-                <CardTitle>Performance Metrics</CardTitle>
-                <CardDescription>Model classification performance</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Accuracy</span>
-                      <span>96.52%</span>
-                    </div>
-                    <Progress value={96.52} className="h-2" />
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Normal Precision</span>
-                      <span>100%</span>
-                    </div>
-                    <Progress value={100} className="h-2" />
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Intrusion Precision</span>
-                      <span>86%</span>
-                    </div>
-                    <Progress value={86} className="h-2" />
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Normal Recall</span>
-                      <span>96%</span>
-                    </div>
-                    <Progress value={96} className="h-2" />
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Intrusion Recall</span>
-                      <span>99%</span>
-                    </div>
-                    <Progress value={99} className="h-2" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Logs Section */}
@@ -280,20 +229,6 @@ const Dashboard = () => {
                 </div>
               </CardContent>
             )}
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="analytics" className="space-y-6">
-          <Card className="bg-cyberpulse-darker">
-            <CardHeader>
-              <CardTitle>Analysis Coming Soon</CardTitle>
-              <CardDescription>
-                Advanced analytics features are currently in development
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>Additional insights and visualization tools will be available in a future update.</p>
-            </CardContent>
           </Card>
         </TabsContent>
 
